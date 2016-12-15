@@ -4,7 +4,8 @@
   "description": "The Kitten Modelling Agency",
   "main": "index.js",
   "scripts": {
-    "test": "tape tests/*"
+    "test": "tape tests/*",
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/dmytri/kittyglitter#readme",
   "dependencies": {
+    "contentful-metalsmith": "^0.7.0",
+    "metalsmith": "^2.3.0",
+    "metalsmith-layouts": "^1.7.0",
+    "metalsmith-markdown": "^0.2.1",
     "tape": "^4.6.3"
   }
 }
