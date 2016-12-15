@@ -4,7 +4,7 @@
   "description": "The Kitten Modelling Agency",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"OK\""
+    "test": "tape tests/*"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dmytri/kittyglitter/issues"
   },
-  "homepage": "https://github.com/dmytri/kittyglitter#readme"
+  "homepage": "https://github.com/dmytri/kittyglitter#readme",
+  "dependencies": {
+    "tape": "^4.6.3"
+  }
 }
