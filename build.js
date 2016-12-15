@@ -12,10 +12,12 @@ Metalsmith(__dirname)
     engine: 'mustache'
   }))    
   .use(contentful({
-    space_id : process.env.SPACE_ID,
-    access_token : process.env.ACCESS_TOKEN
+    space_id : process.env.CONTENTFUL_SPACE_ID,
+    access_token : process.env.CONTENTFUL_ACCESS_TOKEN
   }))
   .build(function(err) {
+    console.log(process.env.SPACE_ID)
+    console.log(process.env.ACCESS_TOKEN)
     if (err) throw err
     else console.log("OK")
   })
