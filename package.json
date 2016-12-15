@@ -1,0 +1,19 @@
+{
+  "name": "kittyglitter",
+  "version": "0.1.0",
+  "description": "The Kitten Modelling Agency",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"OK\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmytri/kittyglitter.git"
+  },
+  "author": "Dmytri Kleiner",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/dmytri/kittyglitter/issues"
+  },
+  "homepage": "https://github.com/dmytri/kittyglitter#readme"
+}
