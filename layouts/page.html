@@ -1,12 +1,17 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{data.fields.title}}</title>
-  </head>
-  <body>
-    <h1>{{data.fields.title}}<h1>
-    <p>{{data.fields.description}}</p>
-    {{contents}}
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+</head>
+<body>
+  <main>
+    <p>
+      <a href="/{{_parentFileName }}">Go back</a>
+    </p>
+    <article>
+      <div>{{data.fields.description}}</div>
+    </article>
+  </main>
+</body>
 </html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+</head>
+<body>
+  <main>
+    <ul>
+      {{#data.entries}}
+        <li>
+          <div>
+            <p data-markdown>{{fields.description}}</p>
+            <a href="{{_fileName}}">Read more...</a>
+          </div>
+        </li>
+      {{/data.entries}}
+    </ul>
+  </main>
+</body>
+</html>
