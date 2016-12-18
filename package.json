@@ -6,7 +6,7 @@
   "scripts": {
     "test": "tape tests/*",
     "build": "node build.js",
-    "deploy": "sh deploy.sh"
+    "deploy": "node deploy.js"
   },
   "repository": {
     "type": "git",
