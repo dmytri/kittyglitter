@@ -21,6 +21,7 @@
 
     write.on('error', function(err) {
       console.error(err)
+      process.exit(1)
     })
 
     write.on('success', function(read) {
