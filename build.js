@@ -1,8 +1,9 @@
-;(function () {
+(function () {
 const Metalsmith = require('metalsmith')
-const layouts = require('metalsmith-layouts');
-const markdown = require('metalsmith-markdown');
-const contentful = require('contentful-metalsmith');
+const layouts = require('metalsmith-layouts')
+const markdown = require('metalsmith-markdown')
+const permalinks = require('metalsmith-permalinks')
+const contentful = require('contentful-metalsmith')
 
 Metalsmith(__dirname)
   .source('src')
@@ -15,6 +16,7 @@ Metalsmith(__dirname)
     engine: 'mustache',
   }))    
   .use(markdown())
+  .use(permalinks())
   .build(function(err) {
     if (err) throw err
     else console.log("DONE")

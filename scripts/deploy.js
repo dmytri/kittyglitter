@@ -10,24 +10,24 @@
     region: process.env.RACKSPACE_REGION,
   })
 
-  glob.sync('build/*').forEach((file) => {
-    const remote = file.split('/').pop()
-    const read = fs.createReadStream(file)
+  glob.sync('build/**').forEach((file) => {
+    if (fs.statSync(file).isFile()) {
+      const remote = file.substr(6)
+      const read = fs.createReadStream(file)
+      const write = client.upload({
+        container: process.env.RACKSPACE_CONTAINER,
+        remote: remote
+      })
 
-    const write = client.upload({
-      container: process.env.RACKSPACE_CONTAINER,
-      remote: remote
-    })
+      write.on('error', function(err) {
+        console.error(err)
+        process.exit(1)
+      })
 
-    write.on('error', function(err) {
-      console.error(err)
-      process.exit(1)
-    })
-
-    write.on('success', function(read) {
-      console.log(read.toJSON())
-    })
-
-    read.pipe(write)
+      write.on('success', function(read) {
+        console.log(read.toJSON())
+      })
+      read.pipe(write)
+    }
   })
 }())
