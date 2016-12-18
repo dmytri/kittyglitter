@@ -6,7 +6,7 @@
   "scripts": {
     "test": "tape tests/*",
     "build": "node build.js",
-    "deploy": "node deploy.js"
+    "deploy": "node scripts/deploy.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "metalsmith-markdown": "^0.2.1",
     "mustache": "^2.3.0",
     "pkgcloud": "^1.4.0",
-    "tape": "^4.6.3"
+    "tape": "^4.6.3",
+    "wt-cli": "^3.9.0"
   }
 }
