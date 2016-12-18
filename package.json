@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "tape tests/*",
-    "build": "node build.js"
+    "build": "node build.js",
+    "deploy": "sh deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "metalsmith-layouts": "^1.7.0",
     "metalsmith-markdown": "^0.2.1",
     "mustache": "^2.3.0",
+    "pkgcloud": "^1.4.0",
     "tape": "^4.6.3"
   }
 }
