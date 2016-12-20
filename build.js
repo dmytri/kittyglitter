@@ -14,9 +14,10 @@ Metalsmith(__dirname)
   }))
   .use(layouts({
     engine: 'mustache',
+    partials: 'layouts/partials'
   }))    
-  .use(markdown())
   .use(permalinks())
+  .use(markdown())
   .build(function(err) {
     if (err) throw err
     else console.log("DONE")

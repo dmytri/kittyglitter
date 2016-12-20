@@ -1,8 +1,8 @@
 ---
 title: kitty glitter
 contentful:
-  content_type: '*'
-  entry_filename_pattern: page_${ sys.id }
-  entry_template: 'page.html'
-layout: index.html
+  content_type: page 
+  entry_filename_pattern: ${fields.slug}
+  entry_template: page.mustache
+layout: index.mustache
 ---
