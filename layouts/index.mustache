@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  {{> stylesheets}}
   <title>{{title}}</title>
 </head>
 <body>
@@ -10,8 +11,8 @@
       {{#data.entries}}
         <li>
           <div>
-            <p data-markdown>{{fields.description}}</p>
-            <a href="{{_fileName}}">Read more...</a>
+            <p data-markdown>{{fields.title}}</p>
+            <a href="{{fields.slug}}/">Read more...</a>
           </div>
         </li>
       {{/data.entries}}
